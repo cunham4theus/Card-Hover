@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  color: #f7f7f7;
+  background-color: #181818;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.projects {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-bottom: 150px;
+  max-width: 1500px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.projects-cards {
+  position: relative;
+  height: 500px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: -10px 0 35px #000;
+  background-image: linear-gradient(to right, #181818, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease-out;
+  margin-left: -60px;
+  margin-bottom: -100px;
+  cursor: pointer;
+}
+
+.projects-cards:hover {
+  transform: scale(1.035);
+  transform: translateY(-50px) translateX(-50px);
+}
+
+.projects-cards h2 {
+  text-align: center;
+}
+
+.cards-item {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards-item i {
+  transition: all 0.3s ease-out;
+}
+
+.cards-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cards-img img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-out;
+}
+
+.line {
+  width: 90%;
+  height: 5px;
+  background-color: #333;
+  margin: 0 auto;
+}
+
+.detail {
+  height: 344px;
+  width: 344px;
+  border: 4px solid #181818;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.projects-cards:hover .detail {
+  border-right-color: #f7f7f7;
+  border-left-color: #f7f7f7;
+  animation: spin 4s ease infinite;
+}
+
+.cards-img .btn {
+  z-index: 3;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  color: #121212;
+  background-color: #f7f7f7;
+  font-size: 22px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px #121212;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+
+.cards-img .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #222;
+  letter-spacing: 0.5px;
+}
+
+.projects-cards:hover .fa-html5 {
+  color: #bb3720;
+}
+
+.projects-cards:hover .fa-css3-alt {
+  color: #018ccc;
+}
+
+.projects-cards:hover .fa-js-square {
+  color: yellow;
+}
+
+.projects-cards:hover .fa-sass {
+  color: #f064fd;
+}
+
+.projects-cards:hover .fa-bootstrap {
+  color: #7507db;
+}
+
+.projects-cards:hover .fa-figma {
+  color: #843697;
+}
+
+.projects-cards:hover .fa-react {
+  color: #0b91c5;
+}
+
+.projects-cards:hover .fa-git-alt {
+  color: #f00101;
+}
+
+.projects-cards:hover .btn {
+  opacity: 1;
+}
+
+.projects-cards:hover .cards-img img {
+  filter: blur(5px) brightness(0.7);
+  transform: scale(1.12);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
